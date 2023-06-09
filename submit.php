@@ -1,6 +1,8 @@
 <? 
 include 'include.php';
 require_once 'recaptcha.php';
+
+$site = $_GET['site'];
 ?>
 <html>
 <head>
@@ -40,7 +42,7 @@ require_once 'recaptcha.php';
                         <label for="Name">Website Name</label>
                     </div>
                     <div class="input-field col s6">
-                        <input placeholder="http://google.com" name="url" id="url" type="url" class="validate" required>
+                        <input placeholder="http://google.com" name="url" id="url" value="<? echo $site; ?>" type="url" class="validate" required>
                         <label for="url" data-error="Please enter a valid URL">Website URL</label>
                     </div>
                 </div>
